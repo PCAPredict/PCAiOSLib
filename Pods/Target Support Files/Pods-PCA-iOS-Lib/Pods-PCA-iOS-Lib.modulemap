@@ -1,0 +1,6 @@
+framework module Pods_PCA_iOS_Lib {
+  umbrella header "Pods-PCA-iOS-Lib-umbrella.h"
+
+  export *
+  module * { export * }
+}
