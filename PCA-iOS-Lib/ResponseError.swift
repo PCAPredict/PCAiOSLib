@@ -8,8 +8,8 @@
 
 import Foundation
 
-class ResponseError: NSObject{
-    var
+public class ResponseError: NSObject{
+    public var
     Error: String?,
     Description: String?,
     Cause: String?,

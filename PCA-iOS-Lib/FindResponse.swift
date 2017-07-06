@@ -11,10 +11,10 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class FindResponse: Mappable {
-    var Items: [FindResponseItem]?;
+public class FindResponse: Mappable {
+    public var Items: [FindResponseItem]?;
     
-    required init(map: Map) {
+    required public init(map: Map) {
         
     }
     
@@ -22,7 +22,7 @@ class FindResponse: Mappable {
         self.Items = [];
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         Items <- map["Items"];
     }
     

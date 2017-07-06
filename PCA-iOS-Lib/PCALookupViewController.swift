@@ -2,9 +2,9 @@ import UIKit
 import Alamofire
 import CoreLocation
 
-class PCALookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+public class PCALookupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    init(licenseKey: String) {
+    public init(licenseKey: String) {
         self.key = licenseKey;
         super.init(nibName: "PCALookupView", bundle: nil)
     }
@@ -89,7 +89,7 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -97,7 +97,7 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
     var manager: Alamofire.SessionManager? = nil;
     let locationManager = CLLocationManager()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         if let bgColor = self.addressDelegate?.pca_backgroundColor?() {
@@ -119,8 +119,7 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
         searchField.becomeFirstResponder()
     }
     
-    var addressDelegate:PCALookupViewDelegate?
-    
+    public var addressDelegate:PCALookupViewDelegate?
     
     
     var currentResponse: FindResponse? = nil;
@@ -128,7 +127,7 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
     var lastText: String? = nil;
     
     
-    func isValid() -> Bool{
+    public func isValid() -> Bool{
         //TODO -- Check for errors - no credit, bad key, no network connection etc
         
         if !Reachability.isInternetAvailable() {
@@ -220,17 +219,17 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.currentResponse?.Items?.count ?? 0;
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let currentItem = self.currentResponse?.Items?[indexPath.item] {
             
@@ -254,7 +253,7 @@ class PCALookupViewController: UIViewController, UITableViewDataSource, UITableV
         return UITableViewCell(style: .subtitle, reuseIdentifier: "");
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentItem = self.currentResponse?.Items?[indexPath.item];
         if(currentItem?.ItemType == "Address"){
             MakeRetrieveRequest(id: (currentItem?.Id)!)

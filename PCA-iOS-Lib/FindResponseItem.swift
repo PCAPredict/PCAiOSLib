@@ -11,8 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class FindResponseItem: NSObject, Mappable {
-    var
+public class FindResponseItem: NSObject, Mappable {
+    public var
     Id: String?,
     ItemType: String?,
     Text: String?,
@@ -22,7 +22,7 @@ class FindResponseItem: NSObject, Mappable {
     Cause: String?,
     Resolution: String?;
     
-    required init(map: Map) {
+    required public init(map: Map) {
         
     }
     
@@ -34,7 +34,7 @@ class FindResponseItem: NSObject, Mappable {
         self.Description = "";
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         Id <- map["Id"];
         ItemType <- map["Type"];
         Text <- map["Text"];

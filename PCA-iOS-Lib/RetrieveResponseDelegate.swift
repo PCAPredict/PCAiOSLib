@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-@objc protocol PCALookupViewDelegate: class {
+@objc public protocol PCALookupViewDelegate: class {
     func didRecieveAddress(address: RetrieveResponseItem)
     @objc optional func pca_didRecieveError(error: ResponseError);
     @objc optional func pca_cellForFindResponse(findResponse: FindResponseItem) -> UITableViewCell

@@ -34,6 +34,7 @@
 		AF967B031F02A5D5004EF605 /* PCALookupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCALookupView.xib; sourceTree = "<group>"; };
 		AF967B051F02A5F8004EF605 /* PCALookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCALookupViewController.swift; sourceTree = "<group>"; };
 		AF967B071F02A62F004EF605 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AF967B091F02F317004EF605 /* PCABridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCABridgingHeader.h; sourceTree = "<group>"; };
 		AFBE01EF1F01911800354C0C /* FindResponseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindResponseItem.swift; sourceTree = "<group>"; };
 		C47CC6020658BCE0F9DEB520 /* Pods_PCA_iOS_Lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCA_iOS_Lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +86,7 @@
 				AF6B36BC1EFD93140016207D /* Info.plist */,
 				AF967B051F02A5F8004EF605 /* PCALookupViewController.swift */,
 				AF967B071F02A62F004EF605 /* Reachability.swift */,
+				AF967B091F02F317004EF605 /* PCABridgingHeader.h */,
 			);
 			path = "PCA-iOS-Lib";
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "PCA-iOS-Lib/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pcapredict.captureplus.PCA-iOS-Lib";
 				PRODUCT_NAME = PCAiOSLib;
@@ -375,6 +378,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "PCA-iOS-Lib/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pcapredict.captureplus.PCA-iOS-Lib";
 				PRODUCT_NAME = PCAiOSLib;

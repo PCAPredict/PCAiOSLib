@@ -11,8 +11,8 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class RetrieveResponseItem: NSObject, Mappable {
-    var
+public class RetrieveResponseItem: NSObject, Mappable {
+    public var
     Id: String?,
     DomesticId: String?,
     Language: String?,
@@ -75,7 +75,7 @@ class RetrieveResponseItem: NSObject, Mappable {
     Resolution: String?,
     Description: String?;
     
-    required init(map: Map) {
+    required public init(map: Map) {
         
     }
     
@@ -139,7 +139,7 @@ class RetrieveResponseItem: NSObject, Mappable {
         self.Field20 = "";
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         Id <- map["Id"];
         DomesticId <- map["DomesticId"];
         Language <- map["Language"];

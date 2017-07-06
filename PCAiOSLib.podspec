@@ -31,4 +31,10 @@ Pod::Spec.new do |s|
   s.source_files = "PCA-iOS-Lib/**/*.{swift}"
 
   s.resources = "PCA-iOS-Lib/**/*.{png,jpeg,jpg,storyboard,xib}"
+
+  s.resource_bundles = {
+    "PCAiOSLib" => [
+      "PCA-iOS-Lib/**/*.xib"
+    ]
+  }
 end

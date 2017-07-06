@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PCA_iOS_Lib/PCABridgingHeader.h>
 
 //! Project version number for PCA-iOS-Lib.
 FOUNDATION_EXPORT double PCA_iOS_LibVersionNumber;
