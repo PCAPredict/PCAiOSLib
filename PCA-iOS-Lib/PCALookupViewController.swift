@@ -6,7 +6,10 @@ public class PCALookupViewController: UIViewController, UITableViewDataSource, U
     
     public init(licenseKey: String) {
         self.key = licenseKey;
-        super.init(nibName: "PCALookupView", bundle: nil)
+        let podBundle = Bundle(path: Bundle(for: PCALookupViewController.self).path(forResource: "PCAiOSLib", ofType: "bundle")!)
+
+        
+        super.init(nibName: "PCALookupView", bundle: podBundle)
     }
     
     
