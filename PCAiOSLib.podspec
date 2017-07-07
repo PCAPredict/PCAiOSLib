@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.summary = "Insert description"
   s.requires_arc = true
 
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.license = { :type => "MIT", :file => "LICENSE" }
 
