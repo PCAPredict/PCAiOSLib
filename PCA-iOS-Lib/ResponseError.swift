@@ -1,11 +1,3 @@
-//
-//  ResponseError.swift
-//  PCA-iOS-Lib
-//
-//  Created by Henrik on 6/27/17.
-//  Copyright © 2017 Henrik. All rights reserved.
-//
-
 import Foundation
 
 public class ResponseError: NSObject{

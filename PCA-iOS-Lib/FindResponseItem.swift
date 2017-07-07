@@ -1,11 +1,3 @@
-//
-//  FindResponseItem.swift
-//  PCA-iOS-Lib
-//
-//  Created by Henrik on 6/26/17.
-//  Copyright © 2017 Henrik. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import AlamofireObjectMapper

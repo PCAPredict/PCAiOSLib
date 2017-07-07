@@ -1,11 +1,3 @@
-//
-//  PCA-iOS-Lib.h
-//  PCA-iOS-Lib
-//
-//  Created by Henrik on 6/23/17.
-//  Copyright © 2017 Henrik. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <PCA_iOS_Lib/PCABridgingHeader.h>
 
