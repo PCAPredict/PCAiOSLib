@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '9.0'
   s.name = "PCAiOSLib"
-  s.summary = "Insert description"
+  s.summary = "The PCAiOSLib Cocoapod is an easy way to use the PCA Predict or Addressy type-ahead search technology within an iOS application."
   s.requires_arc = true
 
   s.version = "1.0.1"
 
-  s.license = { :type => "MIT", :file => "LICENSE" }
+  s.license = { :type => "BSD", :file => "LICENSE" }
 
   s.author = { "PCA Predict" => "support@pcapredict.com" }
 
