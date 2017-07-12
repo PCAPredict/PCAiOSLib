@@ -19,4 +19,4 @@ On close of this form, func didRecieveAddress can be used, to retrieve the addre
 
 ## Example
 
-A working example of how to implement this Cocoapod is coming soon. Please note you will need to register with either [PCA Predict](http://www.pcapredict.com "PCA Predict") or [Addressy](https://www.addressy.com "Addressy") for a license key.
+A working example of how to implement this Cocoapod is [available here](https://github.com/PCAPredict/PCAiOSLib_ExampleImplementation). Please note you will need to register with either [PCA Predict](http://www.pcapredict.com "PCA Predict") or [Addressy](https://www.addressy.com "Addressy") for a license key.
