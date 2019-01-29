@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.version = "1.1.1"
+  s.swift_version = '4.2'
 
   s.license = { :type => "BSD", :file => "LICENSE" }
 
