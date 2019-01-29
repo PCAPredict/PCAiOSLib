@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.summary = "The PCAiOSLib Cocoapod is an easy way to use the PCA Predict or Addressy type-ahead search technology within an iOS application."
   s.requires_arc = true
 
-  s.version = "1.0.3"
+  s.version = "1.1.0"
 
   s.license = { :type => "BSD", :file => "LICENSE" }
 
@@ -25,8 +25,8 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/PCAPredict/PCAiOSLib.git", :tag => "#{s.version}"}
 
   s.framework = "UIKit"
-  s.dependency 'Alamofire', '~> 4.2.0'
-  s.dependency 'AlamofireObjectMapper', '~> 4.0'
+  s.dependency 'Alamofire', '~> 4.8.1'
+  s.dependency 'AlamofireObjectMapper', '~> 5.2.0'
 
   s.source_files = "PCA-iOS-Lib/**/*.{swift}"
 
