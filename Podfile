@@ -6,7 +6,7 @@ target 'PCA-iOS-Lib' do
   use_frameworks!
 
   # Pods for PCA-iOS-Lib
-    pod 'Alamofire', '~> 4.2.0'
-    pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'Alamofire', '~> 4.8.1'
+    pod 'AlamofireObjectMapper', '~> 5.2.0'
 
 end

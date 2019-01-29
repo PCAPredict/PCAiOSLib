@@ -25,9 +25,9 @@ public class PCALookupViewController: UIViewController, UITableViewDataSource, U
     }
     
     @IBAction func searchValueChanged(_ sender: Any) {
-        var newText: String = searchField.text!;
+        let newText: String = searchField.text!;
         
-        let isBackspace = ((lastText ?? "").characters.count) > newText.characters.count;
+        let isBackspace = ((lastText ?? "").count) > newText.count;
         if(isBackspace){
             currentItem = nil;
         }
@@ -51,8 +51,8 @@ public class PCALookupViewController: UIViewController, UITableViewDataSource, U
     
     func bolden(text: NSString, highlight: NSString, isDescription: Bool)->NSAttributedString{
         //Create the new string and bold attribute to apply
-        let attributedString = NSMutableAttributedString(string: text as String, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 15.0)])
-        let boldFontAttribute = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 15.0)]
+        let attributedString = NSMutableAttributedString(string: text as String, attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15.0)])
+        let boldFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15.0)]
         
         //seperate the highlight array by semicolon first
         let highlightSeperateArr = highlight.components(separatedBy: ";");
@@ -70,7 +70,7 @@ public class PCALookupViewController: UIViewController, UITableViewDataSource, U
             //Loop though the highlights
             for h in highlightArr {
                 //Seperate the highlights into start and end numbers, converting them to int
-                let highlightNumbers = h.components(separatedBy: "-").flatMap { Int($0.trimmingCharacters(in: .whitespaces)) }
+                let highlightNumbers = h.components(separatedBy: "-").compactMap { Int($0.trimmingCharacters(in: .whitespaces)) }
                 
                 if (highlightNumbers.count == 2) {
                     //Location is where the highlight should start from
@@ -265,23 +265,23 @@ public class PCALookupViewController: UIViewController, UITableViewDataSource, U
         }
     }
     
-    func keyboardWasShown(notification: NSNotification){
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+    @objc func keyboardWasShown(notification: NSNotification){
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let insets = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0);
             self.outputTable.contentInset = insets;
             self.outputTable.scrollIndicatorInsets = insets;
         }
     }
     
-    func keyboardWasHidden(notification: NSNotification){
+    @objc func keyboardWasHidden(notification: NSNotification){
         let insets = UIEdgeInsets.zero
         self.outputTable.contentInset = insets;
         self.outputTable.scrollIndicatorInsets = insets;
     }
     
     func registerForKeyboardNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     
